@@ -15,7 +15,8 @@
 		var o = $.extend({
 			targetID: '#tab',
 			tabElement: '.tab-list li',
-			boxElement: '.tab-box'
+			boxElement: '.tab-box',
+			defaultOpenTab: 0
 		}, options);
 	
 		$(o.tabElement, o.targetID).each(function() {
@@ -25,8 +26,8 @@
 				$(o.boxElement, o.targetID).not(':eq(' +selectedTab+')').hide();
 				$(o.tabElement, o.targetID).eq(selectedTab).addClass('selected');				
 			} else {
-				$(o.boxElement, o.targetID).not(':first').hide();
-				$(o.tabElement, o.targetID).eq(0).addClass('selected');
+				$(o.boxElement, o.targetID).hide().eq(o.defaultOpenTab).show();
+				$(o.tabElement, o.targetID).eq(o.defaultOpenTab).addClass('selected');
 			}
 			
 			$(this).click(function(){
