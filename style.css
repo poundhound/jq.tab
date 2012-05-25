@@ -102,7 +102,7 @@ br {
 }
 table {
 	border-collapse: separate;
- *border-collapse: collapse;
+ 	*border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
 	font-size: inherit;
@@ -144,7 +144,7 @@ body:not(:target) {
 
 /*	3= Style
 -----------------------------------------------------*/
-
+nav { margin: 30px; }
 div.tab { margin: 30px; width: 560px; }
 div.tab p { margin-bottom: 1.5em; }
 
